@@ -98,6 +98,10 @@ public class XxlJobHelper {
 
     private static Logger logger = LoggerFactory.getLogger("xxl-job logger");
 
+    public static boolean log(StackTraceElement callInfo, String appendLog) {
+        return logDetail(callInfo, appendLog);
+    }
+
     /**
      * append log with pattern
      *
