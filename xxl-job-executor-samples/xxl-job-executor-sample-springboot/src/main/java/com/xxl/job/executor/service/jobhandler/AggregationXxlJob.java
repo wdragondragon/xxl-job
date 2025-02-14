@@ -18,7 +18,7 @@ public class AggregationXxlJob {
         XxlJobContext xxlJobContext = XxlJobContext.getXxlJobContext();
         long jobId = xxlJobContext.getJobId();
         configuration.set("jobId", jobId);
-        JobContainer container = new JobContainer();
-        container.start(configuration);
+        JobContainer container = new JobContainer(configuration);
+        container.start();
     }
 }
