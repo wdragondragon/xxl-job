@@ -17,8 +17,12 @@ public class AggregationXxlJob {
         Configuration configuration = Configuration.from(new File("C:\\dev\\ideaProject\\DataAggregation\\core\\src\\main\\resources\\job.json"));
         XxlJobContext xxlJobContext = XxlJobContext.getXxlJobContext();
         long jobId = xxlJobContext.getJobId();
-        configuration.set("jobId", jobId);
+        String jobLogFileName = xxlJobContext.getJobLogFileName();
+        long instId = Long.parseLong(jobLogFileName.replaceAll("\\.log", ""));
+
         JobContainer container = new JobContainer(configuration);
+        container.setRunContext("jobId", jobId);
+        container.setRunContext("instId", instId);
         container.start();
     }
 }

@@ -49,6 +49,7 @@ public class AggregationCustomXxlJob {
             public void init() {
                 log.info("custom init");
                 querySql = "select id,test_param1 from datax_test1";
+
                 BaseDataSourceDTO baseDataSourceDTO = new BaseDataSourceDTO();
                 baseDataSourceDTO.setHost("rmHost");
                 baseDataSourceDTO.setPort("3305");
