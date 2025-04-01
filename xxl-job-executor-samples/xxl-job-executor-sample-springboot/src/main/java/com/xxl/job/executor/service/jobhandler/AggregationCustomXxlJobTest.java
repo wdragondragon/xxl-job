@@ -26,11 +26,11 @@ public class AggregationCustomXxlJobTest {
 
     public static void main(String[] args) {
         AggregationCustomXxlJobTest aggregationCustomXxlJobTest = new AggregationCustomXxlJobTest();
-        aggregationCustomXxlJobTest.aggregationCustom();
+        aggregationCustomXxlJobTest.aggregationCustomTest();
     }
 
-    @XxlJob("aggregationCustom")
-    public void aggregationCustom() {
+    @XxlJob("aggregationCustomTest")
+    public void aggregationCustomTest() {
         Configuration configuration = Configuration.newDefault();
         XxlJobContext xxlJobContext = XxlJobContext.getXxlJobContext();
         long jobId = 1;
